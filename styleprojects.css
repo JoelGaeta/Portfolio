@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css?family=Maven+Pro");
+body {
+  background: #f0f0f0;
+}
+.xop-section {
+  font-family: "Maven Pro", sans-serif;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.3;
+  margin: 0 0 4em;
+}
+.project {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  margin: 1em 0;
+  cursor: pointer;
+}
+figure {
+  margin: 0;
+  padding: 0;
+}
+.project figure img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  height: 300px;
+}
+.project figcaption {
+  padding: 1em;
+  background: linear-gradient(
+    to right,
+    rgba(130, 125, 253, 1),
+    rgb(101, 236, 112),
+    rgb(44, 226, 20)
+  );
+  color: #fff;
+}
+.project h4 {
+  color: white;
+  margin: 0;
+  position: relative;
+  top: 18px;
+}
+.cta {
+  margin: 0.5em 0;
+}
+.cta:hover {
+  opacity: 0.2;
+}
+footer ul {
+  max-width: 640px;
+  margin: 2em auto;
+  padding: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+}
+footer ul li {
+  list-style: none;
+  align-self: flex-end;
+  width: 15%;
+}
+footer ul li a {
+  color: grey;
+}
+
+.fa-github {
+  position: relative;
+  top: 9px;
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+.fa:hover {
+  opacity: 0.7;
+}
+@media screen and (min-width: 960px) {
+  .xop-wrapper {
+    position: relative;
+    top: 56px;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  .xop-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+  }
+  .projects:nth-child(1) {
+    grid-column: 1 / span 3;
+  }
+  .project {
+    width: 100%;
+    height: 300px;
+    text-decoration: none;
+    margin: 0;
+  }
+  .project figure {
+    position: relative;
+    overflow: hidden;
+  }
+  .project figure img {
+    position: relative;
+    z-index: 999;
+    transition: transform 0.6s;
+  }
+  .project figure:hover img {
+    transform: translateY(-90px);
+  }
+  .project figcaption {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 20px;
+    height: 90px;
+    width: 100%;
+  }
+}
